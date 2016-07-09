@@ -1,6 +1,7 @@
 ---
 
 - hosts: all
+  remote_user: root
   vars:
     # Obviously change this if you are not in this Rackspace datacenter (or at Rackspace at all)
     - toplevel_timeservers: ['time.ord1.rackspace.com', 'time.ord2.rackspace.com']
