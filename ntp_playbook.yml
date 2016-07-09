@@ -29,7 +29,7 @@
       tags: ntp
  
     - name: Make sure NTP is started up
-      service: name=ntp state=started enabled=yes
+      service: name=ntpd state=started enabled=yes
       tags: ntp
 
 #    - name: Open inbound NTP connections for the timelord, time giver to all
