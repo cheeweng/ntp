@@ -39,8 +39,8 @@
       
   handlers:
     - name: restart ntp
-      service: name=ntp state=restarted
+      service: name=ntpd state=restarted
   
     - name: force ntp update
-      shell: "systemctl stop ntp && ntpdate -s clock.corp.redhat.com  && systemctl start ntp"
+      shell: "systemctl stop ntpd && ntpdate -s clock.corp.redhat.com  && systemctl start ntpd"
       when: ansible_hostname != timelord
